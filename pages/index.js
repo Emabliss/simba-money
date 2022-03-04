@@ -1,10 +1,17 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import Login from '../components/Login'
 
 const Home = () => {
+  const [login, setLogin] = useState(false)
+
+  useEffect(() => {
+    setLogin(true)
+  }, [])
+
   return (
-    <div className="flex h-almost">
+    <div className="flex min-h-screen flex-col md:h-almost md:flex-row">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -17,7 +24,7 @@ const Home = () => {
               backgroundPosition: 'center',
               backgroundSize: 'cover',
             }}
-            className="mt-28 grid h-full w-72 rotate-45 place-items-center border-2 border-teal-700 p-10 lg:w-96"
+            className="mt-28 hidden h-full w-72 rotate-45 place-items-center border-2 border-teal-700 p-10 md:grid lg:w-96"
           >
             <div
               style={{
@@ -34,8 +41,8 @@ const Home = () => {
           <h2 className="text-2xl">USE THE SIMBA MONEY APP</h2>
         </div>
       </div>
-      <div className="flex-1 bg-blue-400 pt-32">
-        <Login />
+      <div className="flex-1 bg-blue-400 py-10 md:pt-32">
+        <Login login={login} />
       </div>
     </div>
   )

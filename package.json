@@ -6,6 +6,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "currency-converter-lt": "^1.2.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.4",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

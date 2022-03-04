@@ -2,7 +2,7 @@ import { useState } from 'react'
 import FormInput from './FormInput'
 import { useRouter } from 'next/router'
 
-const Login = () => {
+const Login = ({ login }) => {
   const [registerMode, setRegisterMode] = useState(false)
   const router = useRouter()
   const handleSubmit = (e) => {
