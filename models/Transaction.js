@@ -14,9 +14,12 @@ const TransactionSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    currencyUsed: {
-      type: Number,
-      enum: [1, 2, 3, 4],
+    sourceCurrency: {
+      type: String,
+      default: 'USD',
+    },
+    targetCurrency: {
+      type: String,
       required: true,
     },
   },

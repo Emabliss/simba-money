@@ -20,9 +20,17 @@ const UserSchema = new mongoose.Schema(
       type: Array,
       default: [],
     },
-    balance: {
+    dollarBalance: {
       type: Number,
       default: 1000,
+    },
+    euroBalance: {
+      type: Number,
+      default: 0,
+    },
+    nairaBalance: {
+      type: Number,
+      default: 0,
     },
     currency: {
       type: String,
