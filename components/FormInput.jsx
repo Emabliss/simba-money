@@ -10,6 +10,7 @@ const FormInput = ({ id, title, type, onChange }) => {
         id={id}
         onChange={onChange}
         className="w-full rounded-md bg-gray-200 p-2 shadow-md outline-none"
+        required
       />
     </div>
   )

@@ -1,5 +1,5 @@
-import dbConnect from '../../util/mongo'
-import User from '../../models/User'
+import dbConnect from '../../../util/mongo'
+import User from '../../../models/User'
 import bcrypt from 'bcrypt'
 
 export default async function handler(req, res) {

@@ -1,7 +1,8 @@
 import dbConnect from '../../util/mongo'
 import User from '../../models/User'
+import { verifyToken } from '../../verifyToken'
 
-export default async function handler(req, res) {
+export default verifyToken(async function handler(req, res) {
   const { method } = req
 
   dbConnect()
@@ -14,4 +15,4 @@ export default async function handler(req, res) {
       res.status(500).json(err)
     }
   }
-}
+})

@@ -15,6 +15,7 @@ const UserSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
+      minlength: 7,
     },
     transactions: {
       type: Array,
@@ -31,10 +32,6 @@ const UserSchema = new mongoose.Schema(
     nairaBalance: {
       type: Number,
       default: 0,
-    },
-    currency: {
-      type: String,
-      default: 'USD',
     },
   },
   { timestamps: true }

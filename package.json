@@ -6,15 +6,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.26.0",
     "bcrypt": "^5.0.1",
-    "currency-converter-lt": "^1.2.4",
+    "cookie": "^0.4.2",
+    "js-cookie": "^3.0.1",
     "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
     "mongoose": "^6.2.4",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@types/cookie": "^0.4.1",
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.0",
