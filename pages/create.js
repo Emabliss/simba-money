@@ -66,7 +66,7 @@ const Create = ({ users, cookie }) => {
           <h1 className="text-center text-xl text-gray-700 md:text-2xl">
             Now You Can Send Money to Friends and Associates
           </h1>
-          <div className="mx-auto mb-8 h-1 w-72 bg-teal-700"></div>
+          <div className="mx-auto mb-8 h-1 w-40 bg-teal-700 sm:w-72"></div>
           <div className="flex-col space-y-5 pl-5 md:flex md:flex-row md:justify-around md:space-y-0 md:pl-3">
             <div className="text-sm text-gray-600 sm:text-lg">
               <span className="font-semibold">Send to: </span>
