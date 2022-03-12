@@ -12,49 +12,30 @@ const Header = ({ user, loggedInUser }) => {
     }
   }
   return (
-    <div className="min-h-50 sticky top-0 z-10 box-border flex items-center justify-between bg-teal-700 px-4">
+    <div className="min-h-50 sticky top-0 z-10 box-border flex items-center justify-between bg-teal-700 py-1 px-4">
       <Link href="/">
-        <h2 className="cursor-pointer text-xl text-gray-100 md:text-2xl">
+        <h2 className="cursor-pointer text-gray-100 sm:text-lg md:text-2xl">
           Simba Money Transfer
         </h2>
       </Link>
       {user && (
-        <h2 className="ml-4 text-gray-100 sm:ml-10 md:ml-64">
-          Welcome beautiful <span className="font-bold">{user.username}</span>
-        </h2>
+        <>
+          <h2 className="ml-4 hidden text-gray-100 sm:ml-10 sm:block sm:text-sm md:ml-20 md:text-lg lg:ml-64">
+            Welcome beautiful <span className="font-bold">{user.username}</span>
+          </h2>
+          <h2 className="ml-10 block text-sm text-gray-100 sm:hidden">
+            <span className="font-bold">{user.username}</span>
+          </h2>
+        </>
       )}
-      <h2 onClick={handleLogout} className="cursor-pointer text-gray-100">
+      <h2
+        onClick={handleLogout}
+        className="ml-1 cursor-pointer text-sm text-gray-100 md:text-lg"
+      >
         {user || loggedInUser ? 'Logout' : 'Login'}
       </h2>
     </div>
   )
-}
-
-export const getServerSideProps = async (ctx) => {
-  const cookie = ctx.req?.headers.cookie
-  const greet = 'Hello'
-
-  if (!cookie) {
-    return {
-      redirect: {
-        destination: '/',
-        parmanent: false,
-      },
-    }
-  }
-  const res = await axios.get('http://localhost:3000/api/users', {
-    headers: {
-      cookie: cookie,
-    },
-  })
-
-  return {
-    props: {
-      users: res.data,
-      cookie,
-      greet,
-    },
-  }
 }
 
 export default Header

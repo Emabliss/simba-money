@@ -12,7 +12,7 @@ const Home = () => {
           <title>Simba Money App</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className=" h-full flex-1 bg-gray-100 pb-11">
+        <div className=" -mt-10 h-full flex-1 bg-gray-100 pb-8 sm:-mt-0 sm:pb-11">
           <div className="hidden h-3/4 flex-col items-center justify-center text-gray-500 lg:flex">
             <div
               style={{

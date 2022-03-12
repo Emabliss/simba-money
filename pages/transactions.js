@@ -16,13 +16,15 @@ const Transactions = ({ transactions, cookie }) => {
 
   return (
     <div
-      className="min-h-screen"
+      className="h-mobileSm min-w-fit overflow-hidden sm:min-h-screen"
       style={{
         background: 'url(./img/background.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
       <Header user={user} />
-      <div className="box-border px-8 pb-20">
+      <div className="box-border px-2 pb-20 sm:px-8">
         <div className="my-5 flex items-center justify-between">
           <h1 className="text-2xl text-gray-700 sm:text-3xl md:text-4xl">
             Transactions
@@ -36,7 +38,7 @@ const Transactions = ({ transactions, cookie }) => {
         {myTransactions.length === 0 ? (
           <h1 className="relative top-20 text-xl text-gray-600 md:text-3xl">{`You have ${user.dollar} USD to spend wisely`}</h1>
         ) : (
-          <table className="w-full  rounded-md bg-white text-left shadow-lg">
+          <table className="w-full rounded-md bg-white text-left shadow-lg">
             <tbody className="border-y-2">
               <tr>
                 <th className="py-2">ID</th>
@@ -71,7 +73,10 @@ const Transactions = ({ transactions, cookie }) => {
             ))}
           </table>
         )}
-        <div className="min-h-44 mt-24 ml-auto flex w-56 flex-col items-center justify-center rounded-md bg-gray-100 py-5 shadow-lg sm:mt-6 sm:w-1/4">
+        <div
+          className="min-h-44 ml-auto flex w-56 flex-col items-center justify-center rounded-md bg-gray-100 py-5 shadow-lg sm:mt-12 sm:w-1/4 "
+          style={{ marginTop: myTransactions.length === 0 ? '150px' : '20px' }}
+        >
           <h2 className="text-xl font-bold text-gray-600 sm:text-2xl">
             Balances
           </h2>

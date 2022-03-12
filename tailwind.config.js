@@ -10,6 +10,7 @@ module.exports = {
         50: '50px',
         xl: '250px',
         xxl: '300px',
+        mobileSm: '990px',
       },
       width: {
         lg: '120px',
