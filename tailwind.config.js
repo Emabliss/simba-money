@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        almost: 'calc(-40px + 100vh)',
+        almost: 'calc(-50px + 100vh)',
         50: '50px',
         xl: '250px',
         xxl: '300px',
