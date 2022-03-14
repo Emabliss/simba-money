@@ -13,7 +13,7 @@ const Header = ({ user, loggedInUser }) => {
   }
   return (
     <div className="min-h-50 sticky top-0 z-10 box-border flex items-center justify-between bg-teal-700 py-1 px-4">
-      <Link href="/">
+      <Link href="/transactions">
         <h2 className="cursor-pointer text-gray-100 sm:text-lg md:text-2xl">
           Simba Money Transfer
         </h2>

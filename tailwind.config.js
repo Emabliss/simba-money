@@ -10,6 +10,8 @@ module.exports = {
         50: '50px',
         xl: '250px',
         xxl: '300px',
+      },
+      minHeight: {
         mobileSm: '990px',
       },
       width: {

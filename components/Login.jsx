@@ -101,7 +101,7 @@ const Login = () => {
       <button className="rounded-md bg-teal-700 py-1 px-6 font-bold text-white">
         {registerMode
           ? 'Register'
-          : registerMode && creating
+          : creating
           ? 'Creating...'
           : fetching
           ? 'Please wait...'
@@ -154,6 +154,7 @@ const Login = () => {
           </span>
         </span>
       )}
+      {creating && <span>Creating...</span>}
     </form>
   )
 }

@@ -16,7 +16,7 @@ const Transactions = ({ transactions, cookie }) => {
 
   return (
     <div
-      className="h-mobileSm min-w-fit overflow-hidden sm:min-h-screen"
+      className="min-h-mobileSm min-w-fit overflow-hidden  sm:min-h-screen"
       style={{
         background: 'url(./img/background.jpg)',
         backgroundSize: 'cover',
